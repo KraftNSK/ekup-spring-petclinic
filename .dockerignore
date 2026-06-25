@@ -1,0 +1,9 @@
+.git
+.gradle
+.idea
+build
+buildSrc/.gradle
+buildSrc/build
+target
+*.iml
+.DS_Store
