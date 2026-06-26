@@ -17,7 +17,7 @@ RUN chmod +x ./gradlew
 COPY src ./src
 
 RUN set -eux; \
-    set -- clean build -x test --no-daemon; \
+    set -- clean build --no-daemon; \
     if [ -n "${KOTLIN_REPO_URL:-}" ]; then set -- "$@" "-Pkotlin_repo_url=${KOTLIN_REPO_URL}"; fi; \
     if [ -n "${KOTLIN_VERSION:-}" ]; then set -- "$@" "-Pkotlin_version=${KOTLIN_VERSION}"; fi; \
     if [ -n "${KOTLIN_API_VERSION:-}" ]; then set -- "$@" "-Pkotlin_api_version=${KOTLIN_API_VERSION}"; fi; \
